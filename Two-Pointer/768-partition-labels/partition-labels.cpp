@@ -8,7 +8,8 @@ public:
         for(int i = 0; i < n; i++)
             indices[s[i]] = i;
         
-        for(int i = 0; i < n; i++){
+        int i = 0;
+        while(i < n){
             int x = indices[s[i]];
 
             for(int j = i; j <= x; j++){
@@ -17,7 +18,7 @@ public:
             }
 
             ans.push_back(x - i + 1);
-            i = x ;
+            i = x + 1;
         }
 
         return ans;
