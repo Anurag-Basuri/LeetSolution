@@ -4,24 +4,18 @@ public:
         if(x == 0) return 0;
 
         int low = 1, high = x;
-        int ans = -1;
-        
+
         while(low <= high){
             int mid = low + (high - low) / 2;
-            long int sq = (long int)mid * mid;
+            long long sq = (long long)mid * mid;  // Use long long for safety during multiplication
 
-            if(sq == x){
-                ans = mid;
-                break;
-            }
+            if(sq == x) return mid;  // Direct return if exact match
             else if(sq > x)
                 high = mid - 1;
-            else{
+            else
                 low = mid + 1;
-                ans = mid;
-            }
         }
 
-        return ans;
+        return high;  // Return the largest integer whose square is <= x
     }
 };
