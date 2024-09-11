@@ -7,12 +7,12 @@ public:
         while(high < n){
             if(nums[high] == 0) noz++;
 
-            while(noz > k){
+            if(noz > k){
                 if(nums[low] == 0) noz--;
                 low++;
             }
 
-            maxl = max(maxl, high - low + 1);
+            if(noz <= k) maxl = max(maxl, high - low + 1);
 
             high++;
         }
