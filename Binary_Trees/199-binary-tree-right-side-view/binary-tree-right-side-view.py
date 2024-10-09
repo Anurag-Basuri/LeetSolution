@@ -27,4 +27,4 @@ class Solution:
 
             ans.append(val)
 
-        return ans      
+        return ans
