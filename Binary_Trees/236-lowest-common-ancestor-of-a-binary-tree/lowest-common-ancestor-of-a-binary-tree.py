@@ -33,5 +33,5 @@ class Solution:
                 break
             i += 1
 
-        return TreeNode(pathp[i - 1])
+        return TreeNode(pathp[i-1])
       
