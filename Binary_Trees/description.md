@@ -6,6 +6,6 @@ The topmost node in a binary tree is called the root, and the bottom-most nodes 
 Representation of Binary Tree
 Each node in a Binary Tree has three parts:
 
-Data
-Pointer to the left child
+Data,
+Pointer to the left child,
 Pointer to the right child
