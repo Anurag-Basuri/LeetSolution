@@ -19,34 +19,24 @@ public:
 class Solution {
 public:
     Node* connect(Node* root) {
-        if (root == nullptr) {
-            return nullptr;
-        }
+        if(root == NULL) return NULL;
 
-        queue<Node*> temp;
-        temp.push(root);
+        Node* leftmost = root;
 
-        while (!temp.empty()) {
-            vector<Node*> lv_node;
-            int size = temp.size();
+        while(leftmost->left){
+            Node* cur = leftmost;
 
-            for (int i = 0; i < size; i++) {
-                Node* x = temp.front();
-                temp.pop();
-                lv_node.push_back(x);
+            while(cur){
+                cur->left->next = cur->right;
 
-                if (x->left) {
-                    temp.push(x->left);
+                if(cur->next){
+                    cur->right->next = cur->next->left;
                 }
-                if (x->right) {
-                    temp.push(x->right);
-                }
+
+                cur = cur->next;
             }
 
-            for (int i = 1; i < size; i++) {
-                lv_node[i - 1]->next = lv_node[i];
-            }
-            lv_node[size - 1]->next = nullptr;
+            leftmost = leftmost->left;
         }
 
         return root;
