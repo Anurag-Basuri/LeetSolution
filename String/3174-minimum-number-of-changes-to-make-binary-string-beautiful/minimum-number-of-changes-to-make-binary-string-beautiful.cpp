@@ -17,6 +17,8 @@ public:
             }
         }
 
+        if(count % 2 != 0) total++;
+
         return total;
     }
 };
