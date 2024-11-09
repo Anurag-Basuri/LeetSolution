@@ -7,8 +7,7 @@ public:
 
         while (i_n <= n - 1) {
             if ((i_x & x) == 0) {
-                if (i_n & (n - 1)) 
-                    res |= i_x;
+                res |= i_x * (i_n & (n - 1) ? 1 : 0);
 
                 i_n <<= 1;
             }
