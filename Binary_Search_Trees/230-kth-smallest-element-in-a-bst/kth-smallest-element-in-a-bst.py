@@ -5,18 +5,23 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def inorder(self, root, ans):
-        if not root:
+    def inorder(self, root, k, counter, klargest):
+        if(root is None or counter[0] >= k):
             return
         
-        self.inorder(root.left, ans) 
-        ans.append(root.val)
-        self.inorder(root.right, ans)
+        self.inorder(root.left, k, counter, klargest)
+        
+        counter[0] += 1
+        if(counter[0] == k):
+            klargest[0] = root.val
+            return
+        
+        self.inorder(root.right, k, counter, klargest)
 
-    def kthSmallest(self, root, k):
-        ans = []
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        klargest = [-1]
+        counter = [0]
 
-        self.inorder(root, ans)
+        self.inorder(root, k, counter, klargest)
 
-        return ans[k - 1]
-       
+        return klargest[0]
