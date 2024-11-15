@@ -13,7 +13,7 @@ class Solution {
 public:
     TreeNode* buildHelper(vector<int>& preorder, int ps, int pl, vector<int>& inorder, int is_, int il, unordered_map<int, int>& indexMap) {
         // Base case: if the start index is greater than the end index, return NULL
-        if (is_ > il) {
+        if (ps > pl ) {
             return nullptr;
         }
         
