@@ -1,29 +1,28 @@
 class Solution:
-    def dfs(self, graph, vis, ans, node):
-        if vis[node] == 2:
-            return True
-
-        if vis[node] == 1:
-            return False
-
-        vis[node] = 1
-
-        for neighbor in graph[node]:
-            if not self.dfs(graph, vis, ans, neighbor):
-                return False
-
-        vis[node] = 2
-        ans.append(node)
-        return True
-
     def eventualSafeNodes(self, graph):
         n = len(graph)
-        vis = [0] * n
+        ultagraph = [[] for _ in range(n)]
+        indegree = [0] * n
         ans = []
 
         for i in range(n):
-            if vis[i] == 0:
-                self.dfs(graph, vis, ans, i)
+            for neighbor in graph[i]:
+                ultagraph[neighbor].append(i)
+                indegree[i] += 1
+
+        q = deque()
+        for i in range(n):
+            if indegree[i] == 0:
+                q.append(i)
+
+        while q:
+            node = q.popleft()
+            ans.append(node)
+
+            for neighbor in ultagraph[node]:
+                indegree[neighbor] -= 1
+                if indegree[neighbor] == 0:
+                    q.append(neighbor)
 
         ans.sort()
         return ans
