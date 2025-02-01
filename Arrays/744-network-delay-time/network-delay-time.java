@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public int networkDelayTime(int[][] times, int n, int k) {
         // Create adjacency list representation of the graph
