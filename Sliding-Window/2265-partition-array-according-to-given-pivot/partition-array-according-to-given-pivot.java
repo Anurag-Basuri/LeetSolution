@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public int[] pivotArray(int[] nums, int pivot) {
         List<Integer> lesser = new ArrayList<>();
