@@ -5,20 +5,36 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def lcaDeepestLeaves(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        def findLCA(node):
-            if not node:
-                return (None, 0)
-            
-            left_node, left_depth = findLCA(node.left)
-            right_node, right_depth = findLCA(node.right)
+    def lca(self, root, p, q):
+        if not root or root == p or root == q:
+            return root
+        left = self.lca(root.left, p, q)
+        right = self.lca(root.right, p, q)
+        if left and right:
+            return root
+        return left if left else right
 
-            if left_depth == right_depth:
-                return (node, left_depth + 1)
-            elif left_depth > right_depth:
-                return (left_node, left_depth + 1)
-            else:
-                return (right_node, right_depth + 1)
-        
-        return findLCA(root)[0]
-     
+    def lcaDeepestLeaves(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
+
+        from collections import deque
+        queue = deque([root])
+        deepest = []
+
+        while queue:
+            size = len(queue)
+            deepest = []
+            for _ in range(size):
+                node = queue.popleft()
+                deepest.append(node)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+
+        ans = deepest[0]
+        for i in range(1, len(deepest)):
+            ans = self.lca(root, ans, deepest[i])
+
+        return ans
