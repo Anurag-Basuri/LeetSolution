@@ -11,20 +11,36 @@
  */
 class Solution {
 public:
-    pair<TreeNode*, int> findLCA(TreeNode* root) {
-        if(root == NULL) return {nullptr, 0};
-
-        auto left = findLCA(root->left);
-        auto right = findLCA(root->right);
-
-        if(left.second == right.second) return {root, left.second + 1};
-        else if(left.second > right.second) return {left.first, left.second + 1};
-        else return {right.first, right.second + 1};
+    TreeNode* lca(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (!root || root == p || root == q) return root;
+        TreeNode* left = lca(root->left, p, q);
+        TreeNode* right = lca(root->right, p, q);
+        if (left && right) return root;
+        return left ? left : right;
     }
 
     TreeNode* lcaDeepestLeaves(TreeNode* root) {
-        auto ans = findLCA(root);
+        if (!root) return nullptr;
 
-        return ans.first;
+        queue<TreeNode*> q;
+        q.push(root);
+        vector<TreeNode*> deepest;
+
+        while (!q.empty()) {
+            int size = q.size();
+            deepest.clear();
+            for (int i = 0; i < size; i++) {
+                TreeNode* node = q.front(); q.pop();
+                deepest.push_back(node);
+                if (node->left) q.push(node->left);
+                if (node->right) q.push(node->right);
+            }
+        }
+
+        TreeNode* ans = deepest[0];
+        for (int i = 1; i < deepest.size(); i++) {
+            ans = lca(root, ans, deepest[i]);
+        }
+        return ans;
     }
 };
