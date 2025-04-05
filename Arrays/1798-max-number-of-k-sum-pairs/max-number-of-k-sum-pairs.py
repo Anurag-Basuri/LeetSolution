@@ -1,19 +1,14 @@
 class Solution:
     def maxOperations(self, nums: list[int], k: int) -> int:
-        nums.sort()
-        i, j = 0, len(nums) - 1
+        map = dict()
         count = 0
 
-        while i < j:
-            s = nums[i] + nums[j]
-
-            if s == k:
+        for i in nums:
+            x = k - i
+            if x in map and map[x] > 0:
                 count += 1
-                i += 1
-                j -= 1
-            elif s < k:
-                i += 1
+                map[x] -= 1
             else:
-                j -= 1
-
+                map[i] = map.get(i, 0) + 1
+        
         return count
