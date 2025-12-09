@@ -11,9 +11,9 @@ This is a dedicated repository where I document my Data Structures and Algorithm
 
 ## 📊 Repository Statistics
 
-- **Total Problems Solved:** 180+
+- **Total Problems Solved:** 180+ _(as of December 2024)_
 - **Programming Languages:** 3 (Python, C++, Java)
-- **Solution Files:** 315+ (101 Python, 160 C++, 54 Java)
+- **Solution Files:** 315+ _(101 Python, 160 C++, 54 Java - as of December 2024)_
 - **Topics Covered:** 16 categories
 - **Regularly Updated:** ✅
 
@@ -34,10 +34,10 @@ Each problem is organized in topic-specific folders with the following structure
 LeetSolution/
 ├── Arrays/
 │   ├── [problem-number]-[problem-name]/
-│   │   ├── README.md              # Problem description
-│   │   ├── solution.py            # Python solution
-│   │   ├── solution.cpp           # C++ solution
-│   │   └── solution.java          # Java solution (if available)
+│   │   ├── README.md                      # Problem description
+│   │   ├── [problem-name].py              # Python solution
+│   │   ├── [problem-name].cpp             # C++ solution
+│   │   └── [problem-name].java            # Java solution (if available)
 ├── Binary_Trees/
 ├── Dynamic_Programming/
 └── ... (more topic folders)
@@ -45,7 +45,7 @@ LeetSolution/
 
 Each problem folder contains:
 - **README.md**: Complete problem statement from LeetCode
-- **Solution files**: Implementations in Python, C++, and/or Java
+- **Solution files**: Named after the problem, implemented in Python, C++, and/or Java
 - **Optimized approaches**: Focus on time and space complexity
 
 ## 📚 Problem Categories
@@ -84,15 +84,15 @@ Each problem folder contains:
 
 ### Structure Example
 ```bash
-# Navigate to a specific problem
+# Navigate to a specific problem (e.g., Product of Array Except Self)
 cd Arrays/238-product-of-array-except-self/
 
 # View problem description
 cat README.md
 
 # Study solutions in different languages
-cat product-of-array-except-self.py
-cat product-of-array-except-self.cpp
+cat product-of-array-except-self.py    # Python solution
+cat product-of-array-except-self.cpp   # C++ solution
 ```
 
 ## 💻 Languages & Examples
