@@ -1,20 +1,21 @@
 class Solution {
 public:
     int minDeletionSize(vector<string>& strs) {
-        int n = strs.size(), m = strs[0].size();
-        if(n == 1) return 0;
+        int rows = strs.size();
+        int cols = strs[0].size();
+        int deletionCount = 0;
 
-        vector<int> check(m, 0);
-
-        for (int i = 1; i < n; i++) {
-            for(int j = 0; j < m; j++) {
-                if(strs[i-1][j] - strs[i][j] >= 1) check[j] = 1; 
+        // Iterate through each column first
+        for (int j = 0; j < cols; j++) {
+            for (int i = 1; i < rows; i++) {
+                // If we find a pair that isn't non-decreasing
+                if (strs[i-1][j] > strs[i][j]) {
+                    deletionCount++;
+                    break; // Move to the next column immediately
+                }
             }
         }
 
-        int c = 0;
-        for(int i:check) c += i; 
-
-        return c;
+        return deletionCount;
     }
 };
