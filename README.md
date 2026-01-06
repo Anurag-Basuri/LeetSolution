@@ -14,7 +14,7 @@ This is a dedicated repository where I document my Data Structures and Algorithm
 - **Total Problems Solved:** 180+ _(as of December 2024)_
 - **Programming Languages:** 3 (Python, C++, Java)
 - **Solution Files:** 315+ _(101 Python, 160 C++, 54 Java - as of December 2024)_
-- **Topics Covered:** 16 categories
+- **Topics Covered:** 18 categories
 - **Regularly Updated:** ✅
 
 ## 📑 Table of Contents
@@ -44,45 +44,51 @@ LeetSolution/
 ```
 
 Each problem folder contains:
+
 - **README.md**: Complete problem statement from LeetCode
 - **Solution files**: Named after the problem, implemented in Python, C++, and/or Java
 - **Optimized approaches**: Focus on time and space complexity
 
 ## 📚 Problem Categories
 
-| Category | Problems | Description |
-|----------|----------|-------------|
-| 🔢 **Arrays** | 61 | Array manipulation, searching, sorting |
-| 🌳 **Binary Trees** | 21 | Tree traversal, construction, manipulation |
-| 🔍 **Binary Search** | 5 | Binary search variations and applications |
-| 🌲 **Binary Search Trees** | 7 | BST operations and properties |
-| 📊 **Graphs** | 20 | Graph traversal, shortest paths, connectivity |
-| 🎯 **Dynamic Programming** | 3 | DP patterns and optimization |
-| 💚 **Greedy** | 11 | Greedy algorithms and optimization |
-| 🪟 **Sliding Window** | 12 | Window-based array/string problems |
-| 🔤 **String** | 17 | String manipulation and pattern matching |
-| #️⃣ **Hash Table** | 2 | Hash-based data structures |
-| 🔲 **Matrix** | 5 | 2D array operations |
-| ⚡ **Bit Manipulation** | 5 | Bitwise operations |
-| 🔝 **Priority Queue** | 1 | Heap-based problems |
-| 🛤️ **Shortest Path** | 2 | Dijkstra, Bellman-Ford algorithms |
-| 📋 **Topological Sort** | 4 | Graph ordering problems |
-| 👉👈 **Two Pointer** | 4 | Two-pointer technique |
+| Category                   | Problems | Description                                   |
+| -------------------------- | -------- | --------------------------------------------- |
+| 🔢 **Arrays**              | 49       | Array manipulation, searching, sorting        |
+| 🌳 **Binary Trees**        | 25       | Tree traversal, construction, manipulation    |
+| 🔍 **Binary Search**       | 10       | Binary search variations and applications     |
+| 🌲 **Binary Search Trees** | 8        | BST operations and properties                 |
+| 📊 **Graphs**              | 15       | Graph traversal, shortest paths, connectivity |
+| 🎯 **Dynamic Programming** | 4        | DP patterns and optimization                  |
+| 💚 **Greedy**              | 12       | Greedy algorithms and optimization            |
+| 🪟 **Sliding Window**      | 15       | Window-based array/string problems            |
+| 🔤 **String**              | 18       | String manipulation and pattern matching      |
+| #️⃣ **Hash Table**          | 2        | Hash-based data structures                    |
+| 🔲 **Matrix**              | 5        | 2D array operations                           |
+| ⚡ **Bit Manipulation**    | 7        | Bitwise operations                            |
+| 🔝 **Priority Queue**      | 1        | Heap-based problems                           |
+| 🛤️ **Shortest Path**       | 2        | Dijkstra, Bellman-Ford algorithms             |
+| 📋 **Topological Sort**    | 6        | Graph ordering problems                       |
+| 👉👈 **Two Pointer**       | 2        | Two-pointer technique                         |
+| 🔗 **Linked List**         | 3        | Linked list manipulation                      |
+| 🔢 **Math**                | 6        | Number theory, arithmetic                     |
 
 ## 🎯 How to Use This Repository
 
 ### For Learning
+
 1. **Browse by Topic**: Navigate to the category you're studying
 2. **Read the Problem**: Each folder contains a README with the problem statement
 3. **Study Solutions**: Compare implementations across different languages
 4. **Understand Complexity**: Solutions focus on optimal time and space complexity
 
 ### For Interview Preparation
+
 1. **Practice by Category**: Focus on weak areas systematically
 2. **Multiple Languages**: See the same logic in Python, C++, and Java
 3. **Learn Patterns**: Identify common patterns across similar problems
 
 ### Structure Example
+
 ```bash
 # Navigate to a specific problem (e.g., Product of Array Except Self)
 cd Arrays/238-product-of-array-except-self/
@@ -98,6 +104,7 @@ cat product-of-array-except-self.cpp   # C++ solution
 ## 💻 Languages & Examples
 
 ### Python
+
 ```python
 # Example: Clean, readable solutions with Pythonic approaches
 def twoSum(nums, target):
@@ -109,6 +116,7 @@ def twoSum(nums, target):
 ```
 
 ### C++
+
 ```cpp
 // Example: Efficient implementations with STL
 vector<int> twoSum(vector<int>& nums, int target) {
@@ -123,6 +131,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 ```
 
 ### Java
+
 ```java
 // Example: Object-oriented solutions
 public int[] twoSum(int[] nums, int target) {
@@ -140,6 +149,7 @@ public int[] twoSum(int[] nums, int target) {
 ## 🤝 Contributing
 
 While this is a personal learning repository, I welcome:
+
 - 🐛 Bug reports for incorrect solutions
 - 💡 Suggestions for optimization
 - 📝 Alternative approaches or solutions
