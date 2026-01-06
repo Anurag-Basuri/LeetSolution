@@ -1,15 +1,15 @@
-# 📘 Greedy
+# 📘 Two Pointer
 
-Greedy algorithms make the locally optimal choice at each step with the hope of finding a global optimum.
+Two Pointers is a technique used to search for pairs or iterate structures (arrays/lists) usually to optimize time complexity.
 
 ## 🧠 Key Concepts
-- Interval Scheduling
-- Huffman Coding
-- Activity Selection
-- Dijkstra's Algo usage
+- Opposite Direction (Sum types)
+- Same Direction (Fast/Slow)
+- Partitioning
+- Merging
 
 ## ⚙️ Complexity Analysis
-- **Complexity**: Varies (often O(n log n) due to sorting)
+- **Complexity**: Time: O(n) | Space: O(1)
 
 ## 📝 Common Patterns & Tips
 - Identify the problem constraints.

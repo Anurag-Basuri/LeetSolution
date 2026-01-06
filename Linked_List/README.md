@@ -1,15 +1,16 @@
-# 📘 Greedy
+# 📘 Linked List
 
-Greedy algorithms make the locally optimal choice at each step with the hope of finding a global optimum.
+A Linked List is a linear collection of nodes where each node points to the next. It allows efficient insertion and deletion.
 
 ## 🧠 Key Concepts
-- Interval Scheduling
-- Huffman Coding
-- Activity Selection
-- Dijkstra's Algo usage
+- Fast & Slow Pointers
+- Reversal
+- Dummy Node
+- Merge Two Lists
+- Cycle Detection
 
 ## ⚙️ Complexity Analysis
-- **Complexity**: Varies (often O(n log n) due to sorting)
+- **Complexity**: Access: O(n) | Insert/Delete: O(1) (at known position)
 
 ## 📝 Common Patterns & Tips
 - Identify the problem constraints.

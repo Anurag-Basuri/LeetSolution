@@ -1,15 +1,16 @@
-# 📘 Greedy
+# 📘 Math
 
-Greedy algorithms make the locally optimal choice at each step with the hope of finding a global optimum.
+Problems involving number theory, geometry, combinatorics, and basic arithmetic operations.
 
 ## 🧠 Key Concepts
-- Interval Scheduling
-- Huffman Coding
-- Activity Selection
-- Dijkstra's Algo usage
+- GCD/LCM (Euclid)
+- Sieve of Eratosthenes
+- Modular Arithmetic
+- Combinatorics
+- Geometry
 
 ## ⚙️ Complexity Analysis
-- **Complexity**: Varies (often O(n log n) due to sorting)
+- **Complexity**: Varies by algorithm
 
 ## 📝 Common Patterns & Tips
 - Identify the problem constraints.

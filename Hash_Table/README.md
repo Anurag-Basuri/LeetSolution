@@ -1,15 +1,15 @@
-# 📘 Greedy
+# 📘 Hash Table
 
-Greedy algorithms make the locally optimal choice at each step with the hope of finding a global optimum.
+A Hash Table implements an associative array abstract data type that maps keys to values using a hash function.
 
 ## 🧠 Key Concepts
-- Interval Scheduling
-- Huffman Coding
-- Activity Selection
-- Dijkstra's Algo usage
+- Collision Resolution
+- HashMap vs HashSet
+- Counting Frequencies
+- Two Sum Pattern
 
 ## ⚙️ Complexity Analysis
-- **Complexity**: Varies (often O(n log n) due to sorting)
+- **Complexity**: Access/Insert/Delete: O(1) average
 
 ## 📝 Common Patterns & Tips
 - Identify the problem constraints.
