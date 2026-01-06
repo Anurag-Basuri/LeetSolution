@@ -56,7 +56,7 @@ Each problem folder contains:
 | 🔢 **Arrays**              | 41       | Array manipulation, searching, sorting        |
 | 🌳 **Binary Trees**        | 25       | Tree traversal, construction, manipulation    |
 | 🔍 **Binary Search**       | 10       | Binary search variations and applications     |
-| 🌲 **Binary Search Trees** | 8        | BST operations and properties                 |
+| 🌲 **Binary Search Trees** | 7        | BST operations and properties                 |
 | 📊 **Graphs**              | 15       | Graph traversal, shortest paths, connectivity |
 | 🎯 **Dynamic Programming** | 4        | DP patterns and optimization                  |
 | 💚 **Greedy**              | 12       | Greedy algorithms and optimization            |
@@ -69,7 +69,7 @@ Each problem folder contains:
 | 🛤️ **Shortest Path**       | 2        | Dijkstra, Bellman-Ford algorithms             |
 | 📋 **Topological Sort**    | 6        | Graph ordering problems                       |
 | 👉👈 **Two Pointer**       | 5        | Two-pointer technique                         |
-| 🔗 **Linked List**         | 3        | Linked list manipulation                      |
+| 🔗 **Linked List**         | 4        | Linked list manipulation                      |
 | 🔢 **Math**                | 6        | Number theory, arithmetic                     |
 
 ## 🎯 How to Use This Repository
