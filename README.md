@@ -53,7 +53,7 @@ Each problem folder contains:
 
 | Category                   | Problems | Description                                   |
 | -------------------------- | -------- | --------------------------------------------- |
-| 🔢 **Arrays**              | 49       | Array manipulation, searching, sorting        |
+| 🔢 **Arrays**              | 41       | Array manipulation, searching, sorting        |
 | 🌳 **Binary Trees**        | 25       | Tree traversal, construction, manipulation    |
 | 🔍 **Binary Search**       | 10       | Binary search variations and applications     |
 | 🌲 **Binary Search Trees** | 8        | BST operations and properties                 |
@@ -62,13 +62,13 @@ Each problem folder contains:
 | 💚 **Greedy**              | 12       | Greedy algorithms and optimization            |
 | 🪟 **Sliding Window**      | 15       | Window-based array/string problems            |
 | 🔤 **String**              | 18       | String manipulation and pattern matching      |
-| #️⃣ **Hash Table**          | 2        | Hash-based data structures                    |
+| #️⃣ **Hash Table**          | 6        | Hash-based data structures                    |
 | 🔲 **Matrix**              | 5        | 2D array operations                           |
 | ⚡ **Bit Manipulation**    | 7        | Bitwise operations                            |
 | 🔝 **Priority Queue**      | 1        | Heap-based problems                           |
 | 🛤️ **Shortest Path**       | 2        | Dijkstra, Bellman-Ford algorithms             |
 | 📋 **Topological Sort**    | 6        | Graph ordering problems                       |
-| 👉👈 **Two Pointer**       | 2        | Two-pointer technique                         |
+| 👉👈 **Two Pointer**       | 5        | Two-pointer technique                         |
 | 🔗 **Linked List**         | 3        | Linked list manipulation                      |
 | 🔢 **Math**                | 6        | Number theory, arithmetic                     |
 
