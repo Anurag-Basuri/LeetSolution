@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool dfs(vector<vector<int>>& preList, int node, vector<int>& vis, vector<int>& ans){
+    bool dfs(vector<vector<int>>& preList, int node, vector<int>& vis) {
         if (vis[node] == 1)
             return true;
 
@@ -10,17 +10,16 @@ public:
         vis[node] = 1;
 
         for (int next : preList[node]) {
-            if (dfs(preList, next, vis, ans)) {
+            if (dfs(preList, next, vis)) {
                 return true; 
             }
         }
 
         vis[node] = 2;
-        ans.push_back(node);
         return false;
     }
 
-    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         vector<vector<int>> preList(numCourses);
 
         for (const auto& prereq : prerequisites) {
@@ -28,16 +27,15 @@ public:
         }
 
         vector<int> vis(numCourses, 0);
-        vector<int> ans;
 
         for (int i = 0; i < numCourses; i++) {
             if (vis[i] == 0) {
-                if (dfs(preList, i, vis, ans)) {
-                    return {};
+                if (dfs(preList, i, vis)) {
+                    return false;
                 }
             }
         }
 
-        return ans;
+        return true;
     }
 };
