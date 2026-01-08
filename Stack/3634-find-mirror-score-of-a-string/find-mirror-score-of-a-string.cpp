@@ -7,7 +7,7 @@ public:
 
         for(int i = 0; i < n; i++) {
             char ch = s[i];
-            char chMir = 'z' - (ch - 'a');
+            char chMir = 'z' - ch + 97;
 
             if(!stMap[chMir].empty()) {
                 sum += i - stMap[chMir].top();
