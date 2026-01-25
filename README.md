@@ -28,19 +28,19 @@ Whether you're preparing for technical interviews or learning algorithms from sc
 | :-------------------------------------------------- | :---: | :------------------------------------------------ |
 | [**🔢 Arrays**](./Arrays)                           |  40   | Manipulation, searching, sorting, and prefix sums |
 | [**🌳 Binary Trees**](./Binary_Trees)               |  27   | DFS, BFS, traversals, and construction            |
+| [**🎯 Dynamic Programming**](./Dynamic_Programming) |  26   | Memoization, tabulation, and subproblems          |
 | [**🔤 String**](./String)                           |  19   | Pattern matching, parsing, and manipulation       |
 | [**🪟 Sliding Window**](./Sliding_Window)           |  16   | Subarray/substring optimization techniques        |
 | [**📊 Graphs**](./Graphs)                           |  15   | Traversals (BFS/DFS), connectivity, sets          |
-| [**💚 Greedy**](./Greedy)                           |  12   | Local optimality for global solutions             |
+| [**💚 Greedy**](./Greedy)                           |  13   | Local optimality for global solutions             |
 | [**🔍 Binary Search**](./Binary_Search)             |  10   | O(log n) search algorithms and variants           |
-| [**� Dynamic Programming**](./Dynamic_Programming)  |  10   | Memoization, tabulation, and subproblems          |
 | [**⚡ Bit Manipulation**](./Bit_Manipulation)       |   7   | XOR, masking, and bitwise operations              |
 | [**🌲 Binary Search Trees**](./Binary_Search_Trees) |   7   | Search, insert, delete, and balancing             |
 | [**🔢 Math**](./Math)                               |   7   | Number theory, geometry, and combinatorics        |
-| [**#️⃣ Hash Table**](./Hash_Table)                   |   6   | Frequency counting and fast lookups               |
-| [**� Matrix**](./Matrix)                            |   6   | 2D Grid traversal and simulation                  |
+| [**#️⃣ Hash Table**](./Hash_Table)                   |   7   | Frequency counting and fast lookups               |
+| [**🔲 Matrix**](./Matrix)                           |   6   | 2D Grid traversal and simulation                  |
 | [**👉👈 Two Pointer**](./Two_Pointer)               |   5   | In-place array/string optimization                |
-| [**� Topological Sort**](./Topological_Sort)        |   4   | Dependency resolution and DAG ordering            |
+| [**📋 Topological Sort**](./Topological_Sort)       |   4   | Dependency resolution and DAG ordering            |
 | [**🔗 Linked List**](./Linked_List)                 |   4   | Node manipulation, merging, and cycles            |
 | [**🛤️ Shortest Path**](./Shortest_Path_Algo)        |   2   | Dijkstra, Bellman-Ford, Floyd-Warshall            |
 | [**🔝 Priority Queue**](./Priority_Queue)           |   1   | Heap operations and K-th element problems         |
