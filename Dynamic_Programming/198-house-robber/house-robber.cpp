@@ -1,18 +1,22 @@
 class Solution {
 public:
+    int recur(int i, vector<int>& nums, unordered_map<int, int>& dp) {
+        if (i < 0) return 0;
+        if (i == 0) return nums[0];
+
+        if (dp.find(i) != dp.end())
+            return dp[i];
+
+        int notTake = recur(i - 1, nums, dp);
+        int take = recur(i - 2, nums, dp) + nums[i];
+
+        return dp[i] = max(notTake, take);
+    }
+
     int rob(vector<int>& nums) {
-        int n = nums.size();
+        if (nums.empty()) return 0;
 
-        if(n == 1) return nums[0];
-        int a = 0;
-        int b = nums[0];
-
-        for (int i = 1; i < n; i++) {
-            int c = max(b, a + nums[i]);
-            a = b;
-            b = c;
-        }
-
-        return b;
+        unordered_map<int, int> dp;
+        return recur(nums.size() - 1, nums, dp);
     }
 };
