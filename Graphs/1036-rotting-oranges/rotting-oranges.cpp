@@ -40,7 +40,7 @@ public:
                 }
             }
 
-            if(rotted) time++;
+            time++;
         }
 
         return fresh == 0 ? time : -1;
