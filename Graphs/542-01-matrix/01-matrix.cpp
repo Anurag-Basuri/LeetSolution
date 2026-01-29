@@ -3,42 +3,37 @@ public:
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
         int n = mat.size();
         int m = mat[0].size();
-        vector<vector<int>> dist(n, vector<int>(m, 0));
-        int vis[n][m];
-        queue<pair<pair<int, int>, int>> q;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (mat[i][j] == 0) {
-                    q.push({{i, j}, 0});
-                    vis[i][j] = 1;
-                } else {
-                    vis[i][j] = 0;
+        vector<vector<int>> ans(n, vector<int>(m, -1));
+        queue<pair<int,int>> q;
+
+        // Multi-source BFS initialization
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                if(mat[i][j] == 0) {
+                    ans[i][j] = 0;
+                    q.push({i, j});
                 }
             }
         }
 
-        int drow[] = {-1, 0, 1, 0};
-        int dcol[] = {0, -1, 0, 1};
-        while (!q.empty()) {
-            int row = q.front().first.first;
-            int col = q.front().first.second;
-            int steps = q.front().second;
+        vector<pair<int,int>> dir = {{0,1},{0,-1},{1,0},{-1,0}};
+
+        while(!q.empty()) {
+            auto [x, y] = q.front();
             q.pop();
-            dist[row][col] = steps;
 
-            for (int i = 0; i < 4; i++) {
-                int nrow = row + drow[i];
-                int ncol = col + dcol[i];
+            for(auto d : dir) {
+                int nx = x + d.first;
+                int ny = y + d.second;
 
-                if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m &&
-                    vis[nrow][ncol] == 0) {
-                    vis[nrow][ncol] = 1;
-                    q.push({{nrow, ncol}, steps + 1});
+                if(nx >= 0 && ny >= 0 && nx < n && ny < m && ans[nx][ny] == -1) {
+                    ans[nx][ny] = ans[x][y] + 1;
+                    q.push({nx, ny});
                 }
             }
         }
 
-        return dist;
+        return ans;
     }
 };
