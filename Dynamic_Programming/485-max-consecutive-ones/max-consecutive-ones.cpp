@@ -4,18 +4,15 @@ public:
         int i = 0, maxCount = 0, curCount = 0;
         int n = nums.size();
 
-        while(i < n ) {
-            if(nums[i] == 1) {
+        while (i < n) {
+            if (nums[i] == 1)
                 curCount++;
-            } else {
-                maxCount = max(maxCount, curCount);
+            else
                 curCount = 0;
-            }
 
+            maxCount = max(maxCount, curCount);
             i++;
         }
-
-        maxCount = max(maxCount, curCount);
 
         return maxCount;
     }
