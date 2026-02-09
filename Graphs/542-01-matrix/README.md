@@ -1,6 +1,6 @@
 <h2><a href="https://leetcode.com/problems/01-matrix">01 Matrix</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>Given an <code>m x n</code> binary matrix <code>mat</code>, return <em>the distance of the nearest </em><code>0</code><em> for each cell</em>.</p>
 
-<p>The distance between two adjacent cells is <code>1</code>.</p>
+<p>The distance between two cells sharing a common edge is <code>1</code>.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
@@ -28,3 +28,6 @@
 	<li><code>mat[i][j]</code> is either <code>0</code> or <code>1</code>.</li>
 	<li>There is at least one <code>0</code> in <code>mat</code>.</li>
 </ul>
+
+<p>&nbsp;</p>
+<p><strong>Note:</strong> This question is the same as 1765: <a href="https://leetcode.com/problems/map-of-highest-peak/description/" target="_blank">https://leetcode.com/problems/map-of-highest-peak/</a></p>
