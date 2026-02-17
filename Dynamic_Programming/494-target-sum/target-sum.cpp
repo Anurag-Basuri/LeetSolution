@@ -1,25 +1,28 @@
 class Solution {
 public:
-    int totalSum;
-
-    int f(int i, vector<int> &nums, vector<vector<int>> &dp, int target, int currSum) {
-        if (i < 0)
-            return currSum == target;
-
-        if (dp[i][currSum + totalSum] != -1)
-            return dp[i][currSum + totalSum];
-
-        int add = f(i - 1, nums, dp, target, currSum + nums[i]);
-        int sub = f(i - 1, nums,  dp,target, currSum - nums[i]);
-
-        return dp[i][currSum + totalSum] = add + sub;
-    }
-
     int findTargetSumWays(vector<int>& nums, int target) {
         int n = nums.size();
-        totalSum = accumulate(nums.begin(), nums.end(), 0);
-        
-        vector<vector<int>> memo(n, vector<int>(2 * totalSum + 1, -1));
-        return f(n - 1, nums, memo,target, 0);
+        int totalSum = accumulate(nums.begin(), nums.end(), 0);
+
+        // If target is unreachable
+        if (abs(target) > totalSum) return 0;
+
+        vector<vector<int>> dp(n, vector<int>(2 * totalSum + 1, 0));
+
+        // Base case (i = 0)
+        dp[0][ nums[0] + totalSum ] += 1;
+        dp[0][ -nums[0] + totalSum ] += 1;
+
+        // Fill DP table
+        for (int i = 1; i < n; i++) {
+            for (int s = -totalSum; s <= totalSum; s++) {
+                if (dp[i - 1][s + totalSum] > 0) {
+                    dp[i][s + nums[i] + totalSum] += dp[i - 1][s + totalSum];
+                    dp[i][s - nums[i] + totalSum] += dp[i - 1][s + totalSum];
+                }
+            }
+        }
+
+        return dp[n - 1][target + totalSum];
     }
 };
