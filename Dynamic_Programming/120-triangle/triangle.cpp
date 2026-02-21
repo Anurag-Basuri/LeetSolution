@@ -1,35 +1,28 @@
 class Solution {
 public:
-    int travel(int level, int m, int index, 
-               vector<vector<int>>& triangle, 
-               vector<vector<int>>& dp) {
-        
+    int dfs(int i, int j, int n, vector<vector<int>>& triangle, vector<vector<int>>& memo) {
         // Base case: last row
-        if(level == m - 1) 
-            return triangle[level][index];
+        if (i == n - 1)
+            return triangle[i][j];
 
-        // If already computed
-        if(dp[level][index] != INT_MAX) 
-            return dp[level][index];
-        
-        // Recursive relation
-        dp[level][index] = triangle[level][index] + 
-            min(travel(level + 1, m, index, triangle, dp),
-                travel(level + 1, m, index + 1, triangle, dp));
+        // Already computed
+        if (memo[i][j] != INT_MAX)
+            return memo[i][j];
 
-        return dp[level][index];
+        // Recursive calls
+        int down = dfs(i + 1, j, n, triangle, memo);
+        int diag = dfs(i + 1, j + 1, n, triangle, memo);
+
+        return memo[i][j] = triangle[i][j] + min(down, diag);
     }
 
     int minimumTotal(vector<vector<int>>& triangle) {
-        int m = triangle.size();
+        int n = triangle.size();
+        vector<vector<int>> dp(n);
 
-        // DP initialization
-        vector<vector<int>> dp(m);
-        for(int i = 0; i < m; i++) {
+        for(int i = 0; i < n; i++)
             dp[i] = vector<int>(triangle[i].size(), INT_MAX);
-        }
 
-        // Start from top
-        return travel(0, m, 0, triangle, dp);    
+        return dfs(0, 0, n, triangle, dp);
     }
 };
