@@ -53,6 +53,6 @@ public:
         }
 
         // Start positions
-        return dp[0][0][m - 1];
+        return dp[0][m - 1][0];
     }
 };
