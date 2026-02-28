@@ -1,27 +1,23 @@
 class Solution {
 public:
-    int subsequence(int i, vector<int>& nums, unordered_map<int, int>& seen){
-        if(i == nums.size()) return 0;
+    int f(int i, int prev, int n, vector<int>& nums, vector<vector<int>>& dp) {
+        if(i < 0) return 0;
 
-        if(seen.find(i) != seen.end()) return seen[i];
+        if(dp[i][prev] != -1) return dp[i][prev];
 
-        int maxlen = 1;
-        for(int j = i + 1; j < nums.size(); j++){
-            if(nums[j] > nums[i])
-                maxlen = max(maxlen, 1 + subsequence(j, nums, seen));
-        }
+        int notTake = f(i - 1, prev, n, nums, dp);
 
-        seen[i] = maxlen;
-        return maxlen;
+        int take = 0;
+        if(prev == n || nums[i] < nums[prev])
+            take = 1 + f(i - 1, i, n, nums, dp);
+        
+        return dp[i][prev] = max(take, notTake);
     }
 
     int lengthOfLIS(vector<int>& nums) {
-        unordered_map<int, int> seen;
-        int maxlen = 0;
+        int n = nums.size();
+        vector<vector<int>> dp(n, vector<int>(n + 1, -1));
 
-        for(int i = 0; i < nums.size(); i++)
-            maxlen = max(maxlen, subsequence(i, nums, seen));
-        
-        return maxlen;
+        return f(n - 1, n, n, nums, dp);
     }
 };
