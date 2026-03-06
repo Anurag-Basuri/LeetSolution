@@ -2,15 +2,18 @@ class Solution {
 public:
     bool checkOnesSegment(string s) {
         int n = s.size();
+        int c = 0, t = 1;
 
-        int i = 0;
-        for(i = 1; i < n; i++)
-            if(s[i - 1] != s[i]) break;
-        
-        for(i; i < n; i++) {
-            if(s[i] == '1') return false;
+        for(int i = 1; i < n; i++) {
+            if(s[i] == '1') t = 1;
+            else if(t == 1) {
+                t = 0;
+                c++;
+            }
         }
 
-        return true;
+        if(t == 1) c++;
+
+        return c <= 1;
     }
 };
