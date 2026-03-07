@@ -15,7 +15,7 @@ public:
         ListNode* trav = head;
         ListNode* prev = NULL;
 
-        while(trav->next != NULL) {
+        while(trav != NULL) {
             ListNode* curr = trav;
             trav = trav->next;
 
@@ -23,8 +23,6 @@ public:
             prev = curr;
         }
 
-        trav->next = prev;
-
-        return trav;
+        return prev;
     }
 };
