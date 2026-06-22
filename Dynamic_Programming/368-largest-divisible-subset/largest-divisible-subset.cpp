@@ -1,34 +1,40 @@
 class Solution {
 public:
     vector<int> largestDivisibleSubset(vector<int>& nums) {
-        int n = nums.size();
-        if (n == 0) return {};
-        
         sort(nums.begin(), nums.end());
-        vector<int> dp(n, 1), prev(n, -1);
-        
-        int maxIdx = 0;
 
-        for (int i = 1; i < n; ++i) {
-            for (int j = 0; j < i; ++j) {
+        int n = nums.size();
+        vector<int> dp(n, 1);
+        vector<int> parent(n);
+
+        int maxLen = 0;
+        int lastIdx = 0;
+
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+
+            for (int j = 0; j < i; j++) {
                 if (nums[i] % nums[j] == 0 && dp[j] + 1 > dp[i]) {
                     dp[i] = dp[j] + 1;
-                    prev[i] = j;
+                    parent[i] = j;
                 }
             }
-            if (dp[i] > dp[maxIdx]) {
-                maxIdx = i;
+
+            if (maxLen < dp[i]) {
+                maxLen = dp[i];
+                lastIdx = i;
             }
         }
 
-        // Reconstruct the answer
-        vector<int> res;
-        for (int i = maxIdx; i >= 0; i = prev[i]) {
-            res.push_back(nums[i]);
-            if (prev[i] == -1) break;
+        vector<int> ans;
+        while (parent[lastIdx] != lastIdx) {
+            ans.push_back(nums[lastIdx]);
+            lastIdx = parent[lastIdx];
         }
 
-        reverse(res.begin(), res.end());
-        return res;
+        ans.push_back(nums[lastIdx]);
+        reverse(ans.begin(), ans.end());
+
+        return ans;
     }
 };
