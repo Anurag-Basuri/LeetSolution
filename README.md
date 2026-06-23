@@ -19,7 +19,7 @@
 
 | Metric                 |       Value       |
 | :--------------------- | :---------------: |
-| 📝 **Problems Solved** |       200+        |
+| 📝 **Problems Solved** |       325         |
 | 📚 **Categories**      |        19         |
 | 💻 **Languages**       | Python, C++, Java |
 | 🔄 **Status**          |     Active ✅     |
@@ -30,23 +30,23 @@
 
 | Category                                            | Problems | Description                                   |
 | :-------------------------------------------------- | :------: | :-------------------------------------------- |
-| [🔢 **Arrays**](./Arrays)                           |    36    | Manipulation, searching, sorting, prefix sums |
-| [🌳 **Binary Trees**](./Binary_Trees)               |    27    | DFS, BFS, traversals, construction            |
-| [🎯 **Dynamic Programming**](./Dynamic_Programming) |    26    | Memoization, tabulation, subproblems          |
-| [🔤 **String**](./String)                           |    19    | Pattern matching, parsing, manipulation       |
-| [🪟 **Sliding Window**](./Sliding_Window)           |    16    | Subarray/substring optimization               |
-| [💚 **Greedy**](./Greedy)                           |    15    | Local optimality for global solutions         |
-| [📊 **Graphs**](./Graphs)                           |    15    | BFS/DFS, connectivity, union-find             |
-| [🔍 **Binary Search**](./Binary_Search)             |    10    | O(log n) search variants                      |
-| [🔢 **Math**](./Math)                               |    8     | Number theory, geometry, combinatorics        |
-| [⚡ **Bit Manipulation**](./Bit_Manipulation)       |    7     | XOR, masking, bitwise ops                     |
-| [🌲 **Binary Search Trees**](./Binary_Search_Trees) |    7     | Search, insert, delete, balancing             |
+| [🔢 **Arrays**](./Arrays)                           |    61    | Manipulation, searching, sorting, prefix sums |
+| [🎯 **Dynamic Programming**](./Dynamic_Programming) |    37    | Memoization, tabulation, subproblems          |
+| [🔤 **String**](./String)                           |    33    | Pattern matching, parsing, manipulation       |
+| [🌳 **Binary Trees**](./Binary_Trees)               |    29    | DFS, BFS, traversals, construction            |
+| [📊 **Graphs**](./Graphs)                           |    24    | BFS/DFS, connectivity, union-find             |
+| [💚 **Greedy**](./Greedy)                           |    18    | Local optimality for global solutions         |
+| [🪟 **Sliding Window**](./Sliding_Window)           |    18    | Subarray/substring optimization               |
+| [🔲 **Matrix**](./Matrix)                           |    17    | 2D grid traversal, simulation                 |
+| [🔍 **Binary Search**](./Binary_Search)             |    16    | O(log n) search variants                      |
+| [⚡ **Bit Manipulation**](./Bit_Manipulation)       |    15    | XOR, masking, bitwise ops                     |
+| [🔗 **Linked List**](./Linked_List)                 |    13    | Node manipulation, cycles, merging            |
+| [🔢 **Math**](./Math)                               |    12    | Number theory, geometry, combinatorics        |
+| [🌲 **Binary Search Trees**](./Binary_Search_Trees) |    8     | Search, insert, delete, balancing             |
 | [#️⃣ **Hash Table**](./Hash_Table)                   |    7     | Frequency counting, fast lookups              |
-| [🔲 **Matrix**](./Matrix)                           |    6     | 2D grid traversal, simulation                 |
-| [👉👈 **Two Pointer**](./Two_Pointer)               |    5     | In-place array/string optimization            |
+| [👉👈 **Two Pointer**](./Two_Pointer)               |    7     | In-place array/string optimization            |
 | [📋 **Topological Sort**](./Topological_Sort)       |    4     | Dependency resolution, DAG ordering           |
-| [🔗 **Linked List**](./Linked_List)                 |    4     | Node manipulation, cycles, merging            |
-| [📚 **Stack**](./Stack)                             |    2     | LIFO operations, monotonic stacks             |
+| [📚 **Stack**](./Stack)                             |    3     | LIFO operations, monotonic stacks             |
 | [🛤️ **Shortest Path**](./Shortest_Path_Algo)        |    2     | Dijkstra, Bellman-Ford                        |
 | [🔝 **Priority Queue**](./Priority_Queue)           |    1     | Heap operations, K-th element                 |
 
