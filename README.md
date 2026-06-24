@@ -20,7 +20,7 @@
 | Metric                 |       Value       |
 | :--------------------- | :---------------: |
 | 📝 **Problems Solved** |       325         |
-| 📚 **Categories**      |        19         |
+| 📚 **Categories**      |        20         |
 | 💻 **Languages**       | Python, C++, Java |
 | 🔄 **Status**          |     Active ✅     |
 
@@ -49,6 +49,7 @@
 | [📚 **Stack**](./Stack)                             |    3     | LIFO operations, monotonic stacks             |
 | [🛤️ **Shortest Path**](./Shortest_Path_Algo)        |    2     | Dijkstra, Bellman-Ford                        |
 | [🔝 **Priority Queue**](./Priority_Queue)           |    1     | Heap operations, K-th element                 |
+| [🤝 **Disjoint Set Union**](./Disjoint_Set_Union)   |    0     | Connected components, Kruskal's, cycle check  |
 
 ---
 
