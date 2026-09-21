@@ -1,24 +1,26 @@
 class Solution {
 public:
-    int coinChange(vector<int>& coins, int m) {
+    int recur(int i, vector<int> &coins, int amt, int n, vector<vector<int>> &vis) {
+        if(amt <= 0) return 0;
+
+        if(i < 0) return 1e9;
+
+        if(vis[i][amt]) return vis[i][amt];
+
+        int notTake = recur(i - 1, coins, amt, n, vis);
+
+        int take = 1e9;
+        if(coins[i] <= amt)
+            take = 1 + recur(i, coins, amt - coins[i], n, vis);
+        
+        return vis[i][amt] = min(take, notTake);
+    }
+
+    int coinChange(vector<int>& coins, int amount) {
         int n = coins.size();
-        int inf = 1e9;
+        vector<vector<int>> vis(n, vector<int>(amount + 1, 0));
 
-        vector<vector<int>> dp(n + 1, vector<int>(m + 1, inf));
-
-        for (int i = 0; i <= n; i++)
-            dp[i][0] = 0;
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= m; j++) {
-                dp[i][j] = dp[i - 1][j];
-
-                if (coins[i - 1] <= j) {
-                    dp[i][j] = min(dp[i][j], 1 + dp[i][j - coins[i - 1]]);
-                }
-            }
-        }
-
-        return dp[n][m] == inf? -1:dp[n][m];
+        int ans = recur(n - 1, coins, amount, n, vis);
+        return (ans != 1e9)? ans:-1;
     }
 };
