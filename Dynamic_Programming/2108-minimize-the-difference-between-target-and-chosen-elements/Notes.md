@@ -1,1 +1,1 @@
-<h2>minimize-the-difference-between-target-and-chosen-elements Notes</h2><hr>[ Time taken: 1hr 9m 41s ]
+<h2>minimize-the-difference-between-target-and-chosen-elements Notes</h2><hr>[ Time taken: 3hrs 8m 57s ]
